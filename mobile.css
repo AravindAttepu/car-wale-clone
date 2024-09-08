@@ -1,0 +1,58 @@
+@media screen and (max-width: 500px) {
+    .carsinfo{
+        width: 100%;
+    }
+    .nav_bar{
+        width: 100%;
+        padding: 0;
+        display: block;
+        font-size: 0px;
+    }
+    .nav_bar .left_nav span{
+        display: none;
+    }
+    .nav_bar .left_nav{
+        width: max-content;
+    }
+    .nav_bar .right_nav{
+        float:right
+    }
+    .nav_bar .right_nav input
+    {
+        display: none;
+    }
+    .homebg{
+        height: 200px;
+        background-size: 100% 200px;
+        
+    }
+    .homebg .homebg_contents{
+        width: 50%;
+        height: 100px;
+    }
+    .homebg .homebg_contents .heading{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .homebg .homebg_contents .searchbar{
+        font-size: 20px;
+    }
+    .homebg .homebg_contents .searchbar i{
+        display: none;
+    }
+    .section6{
+       height: 260px;
+    }
+    .cars_choice_btn{
+        color: #2c988f;
+    }
+    .footer .ft_s1 span{
+        padding-left: 20px
+    };
+    .ft_s2 {
+       display: block;
+    }
+    .ft_s2 .left_section{
+      
+    }
+}
