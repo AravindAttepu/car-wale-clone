@@ -1,0 +1,505 @@
+body, html{
+    margin: 0;
+    box-sizing: border-box;
+
+   
+}
+*{
+    font-family: "Lato", system-ui;
+}
+.nav_bar{
+    background-color: rgb(255, 255, 255);
+   position:fixed;
+
+    justify-content: space-between;
+    
+    width: 1366px;
+    padding-inline: 100px;
+    margin: 0 auto;
+    display: flex;
+    z-index:100;
+
+}
+.left_nav{
+ 
+    height: inherit;
+    align-content: center;
+    font-weight: 500;display: inline-block;
+}
+.left_nav img{
+    height: 22px;
+    margin-right: 60px;
+}
+.left_nav span{
+    margin-inline: 30px;
+}
+.right_nav{
+    height: inherit;
+   display: flex;
+   flex-wrap: nowrap;
+    align-content: center;
+    display: inline-block;
+}
+.right_nav input{
+    max-width: 300px;
+    padding:12px 50px 12px 16px;
+}
+.right_nav i{
+    margin-inline: 10px;
+    font-size: 25px;
+}
+.homebg{
+    background-image: url("assets/bg/homepage-d-2021.jpg");
+    background-size:cover;
+    height: 400px;
+    background-repeat: no-repeat;
+    align-content: end;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    background-position: center;
+    
+}
+.homebg .homebg_contents{
+    width: 670px;
+   margin: 0 auto;
+    height: 200px;
+    align-content: center;
+  
+    text-align: center;
+    padding: 200px auto 0;
+}
+.homebg .homebg_contents .heading{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+
+}
+.homebg .homebg_contents .searchbar{
+    font-size: 43px;
+    display: flex;
+    justify-content: center;
+    align-content: start;
+margin-bottom: 25px;
+}
+.homebg .homebg_contents .searchbar i{
+    background-color: white;
+   
+    padding-bottom:  5px;
+    border-radius: 5px 0px 0 5px;
+    border: 5px solid white;
+    
+
+
+}
+.homebg .homebg_contents .searchbar button{
+    background-color: red;
+    width: 120px;
+    border: 3px solid white;
+    border-radius:  0 5px 5px 0 ;
+    font-size: 16px;
+    color: white;
+    cursor: wait;
+}
+
+.homebg .homebg_contents .suggestion{
+display: flex;
+justify-content: space-between;
+color:white;
+font-size: 13px;
+
+}
+.homebg .homebg_contents .suggestion a{
+    text-decoration: none;
+    color:white
+}
+.carsinfo{
+    
+    width:80%;
+    margin: 0 auto;
+  height:auto;
+  margin-bottom: 20px;
+}
+.heading{
+    font-size: 22px;
+    font-weight: 700;
+    padding-block: 20px;
+    color: #333;
+}
+.carsinfo .scrolloption{
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px;
+   color: #484848;;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    
+}
+.carsinfo .scrolloption  span{
+    padding-inline: 20px;
+}
+.carsgrid{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-template-rows: 320px ;
+    grid-auto-columns: minmax(310px,2fr);
+    gap: 10px;
+    overflow: scroll;
+ 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    
+scroll-snap-type: x mandatory; 
+}
+.carsinfo .cars_options .carsgrid::-webkit-scrollbar{
+    display: none;
+}
+.cardata{
+    border: 1px solid #e1e1e1;
+    padding-inline: 6px;
+    border-radius: 4px;
+   scroll-snap-align: start;
+
+}
+.carsinfo .cars_options .carsgrid .carphoto{
+    height: 170px;
+    align-content: center;
+    align-items: center;
+
+}
+
+.carphoto img{
+
+    max-width: 100%;
+    } 
+.cardetails{
+max-height: 100%;
+box-sizing: border-box;
+background-color: #f9f9f9;
+padding: 16px 12px 16px 12px;
+color: #333;
+}
+
+.cardetails .carname{
+    font-size: 16px;
+    font-weight: 500;
+   
+}
+
+.cardetails .carprice{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.showpricebtn button{
+    height:30px;
+    width: 160px;
+    font-size: 13px;
+    font-weight: 600;
+    color:  #1f948a;
+    background-color: white;
+    border: 1px solid #1f948a;
+    cursor: pointer;
+}
+
+.section2grid  {
+    display:grid;
+    grid-template-columns: repeat(4, 230px);
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-template-rows: 230px ;
+    grid-auto-columns: minmax(230px,2fr);
+    gap: 10px;
+    
+ 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  
+    margin-top: 20px;
+}
+.section3_brands .heading{
+    font-size: 22px;
+    font-weight: 700;
+    padding-block: 20px;
+    color: #333;
+}
+.section3_brands .logogrid{
+    display: grid;
+    grid-template-columns: repeat(6,159.9px);
+    grid-template-rows: 106px;
+    grid-auto-rows: minmax(106px, 1fr);
+    grid-auto-flow: row;
+   
+    overflow-y: auto;
+    overflow: scroll;
+    border-top: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;;
+    border-radius: 5px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  
+}
+.logogrid .logoimg{
+    
+   margin: 0 auto;
+
+}
+.logogrid .logodetails{
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+   height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+
+}
+
+.budget_section {
+    align-items: center;
+    display: flex;
+    
+    flex-wrap: wrap;
+    border: 1px solid #e1e1e1;
+    padding: 20px 20px;
+}
+.cars_choice_btn{
+    color: #2c988f;
+    font-size: 18px;
+    font-weight: 900;
+    padding-bottom: 11px;
+    padding-right: 0;
+   border-bottom: 5px solid #2c988f;
+}
+
+
+.budget_section a{
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    height: 40px;
+    width: max-content;
+    border: 1px solid;
+    padding-inline: 25px;
+   color:#6f6f6f;
+    font-size: 15px;
+    border-radius: 4rem;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+}
+.scrolloption .scroll_a{
+    text-decoration: none;
+    color: #484848;;
+
+}
+.scrolloption a:active{
+    
+}
+
+.body_type{
+display: grid;
+grid-template-columns: repeat(3, 320px);
+grid-auto-flow: row;
+grid-template-rows: repeat(3,105px);
+border-left: 1px solid #e1e1e1;
+border-top: 1px solid #e1e1e1;
+
+
+}
+
+.body_details {
+align-content: center;
+border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    padding-inline: 20px;
+align-content: center;
+align-items: center;
+display: flex;
+justify-content: space-between;
+    padding-block: 30px;
+    
+}
+.fuel_type{
+    
+    grid-template-rows: repeat(2,105px);
+   
+}
+.transmission_type{
+    grid-template-rows: repeat(1,105px);
+}
+.body_details img{
+    height: 33px;
+}
+
+
+.section5_topcars .s5grid {
+    display: grid;
+    grid-template-rows: 265px;
+    overflow-y: hidden;
+    gap: 20px;
+}
+.section5_topcars .s5carphoto{
+    height: 180px;
+    padding: 0;
+}
+
+.section5_topcars .s5grid .carname{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.section5_topcars .s5grid .carname {
+  color: #333;;  
+}
+.section6{
+    margin-top: 50px;
+    width: 100%;
+    background-image: url("assets/bg/get-final-price-banner.jpg");
+    background-size: 100% 100%;
+    height: 430px;
+}
+.section6 .s6_inner{
+
+    display: flex;
+    justify-content: end;
+align-content: center;
+    align-items: center;
+    height: 100%;
+}
+.section6 .s6_inner .roadpricebox{
+    width: 360px;
+    height: 220px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto 0;
+    padding: 20px;
+    border-radius: 4px;
+}
+.section7_comparecars .cardata .carphotos{
+    display: flex;
+
+  
+}
+.section7_comparecars .cardata .carphotos img
+{
+    height:85px;
+}
+.section7_comparecars .cardata .carphotos .carphoto1{
+    width: max-content
+}
+.section7_comparecars .carsgrid .cardata{
+    position: relative;
+}
+.section7_comparecars .carsgrid .cardata .comparebtn{
+    width: 100%;
+    height: 25px;
+    border: 2px solid;
+    border-radius: 4px;
+    text-align: center;
+    margin-block: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    align-content: center;
+}
+.section7_comparecars .carsgrid{
+    grid-template-columns: repeat(3,312px);
+    grid-template-rows: 240px ;
+}
+.section7_comparecars .carsgrid .circle{
+color: red;
+
+}
+.section7_comparecars .carsgrid .cardata .cardetails{
+    display: flex;
+    justify-content: space-between;
+    padding:0
+
+}
+.section8_popularcars .carsgrid img{
+    height: 180px;
+}
+.section8_popularcars .carsgrid{
+    grid-template-rows: 270px;
+}
+
+.car_updates .cardata{
+    padding: 0;
+}
+.car_updates .carsgrid{
+    grid-template-columns: repeat(3,310px);
+    grid-template-rows: 360px;
+}
+.car_updates .cardetails{
+    
+}
+.car_updates .carsgrid img
+{
+    height: 180px;
+}
+.car_updates .carsgrid .avgtag{
+    font-size: 14px;
+    margin-top: 20px;
+}
+.footer{
+width: 100%;
+background-color: #002b51;
+
+}
+.footer .footer_inner{
+
+width: 80%;
+margin: 0 auto;
+
+}
+.ft_s1{
+    color: white;
+}
+.ft_s2{
+
+}
+.footer img{
+    height: 35px;
+    padding:30px 0px;
+}
+.footer .left_section i{
+    padding-block: 30px;
+    padding-inline: 10px;
+    font-size: 25px;
+}
+.ft_s3 img{
+    filter: invert(1) brightness(10);
+    
+}
+.logo_displaysize{
+    height: 216px;
+}
+.nav_bar2
+{
+    width: 100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+}
+.budget_section a:hover{
+color: #2c988f;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 960px) {
+    .carsinfo{
+        max-width: 960px;
+    }
+}

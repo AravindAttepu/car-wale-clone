@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>Carwale Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar2">
+
+            <div class="nav_bar">
+                <div class="left_nav">
+                    <img src="assets/logo.svg" alt="">
+                    <span>NEW CARS</span>
+                    <span>USED CARS</span>
+                    <span>REVIEWS & NEWS</span>
+                </div>
+                <div class="right_nav">
+                    
+                    <input type="text" placeholder="Search"> 
+                    <i class='bx bx-search'></i>
+                    <i class='bx bx-location-plus' ></i>
+                    <i class='bx bxs-user-circle'></i>
+                </div>
+            </div>
+        </div>
+   
+    <div class="homebg">
+        <div class="homebg_contents">
+            <div class="heading"><span>FIND THE RIGHT CAR</span></div>
+            <div class="searchbar"> <span><i class='bx bx-search'></i></span><input style=" padding:12px 50px 12px 16px; border: none;width: 460px;" type="text"><button>Search</button> </div>
+            <div class="suggestion"><span>eg. <a href="">Jeep Compass</a></span> <span><a href="">New Car Discounts</a> | <a href="">Help Me Find A Car</a> | <a href="">Sell My Car</a></span></div>
+        </div>
+    </div>
+   
+    <div class="carsinfo" style="position: relative;">
+        <div class="heading heading1"><span>Featured Cars</span></div>
+        <div class="cars_options">
+        <div class="scrolloption option1"><span class="cars_choice_btn" style=" padding-left: 0;">TRENDING</span><span style="cursor: not-allowed;">POPULAR</span><span style="cursor: not-allowed;">UPCOMING</span></div>
+        <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -10px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+            <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: 0px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+        <div class="carsgrid" id="trendingcars">
+            
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/curvv-exterior-right-front-three-quarter.webp" alt="tata curvv"></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Tata Curvv</span></div></a>
+                    <div class="carprice">Rs. 9.99 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/thar_roxx.jpeg" alt="Thar Roxx"></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Mahindra Thar Roxx</span></div></a>
+                    <div class="carprice">Rs. 12.99 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/citrogen_basalt.jpeg" alt=""></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Citrogen Basalt</span></div></a>
+                    <div class="carprice">Rs. 7.99 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/xuv_3X0.jpeg" alt="tata curvv"></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>TMahindra XUV 3XO</span></div></a>
+                    <div class="carprice">Rs. 7.49 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/fronxx.webp" alt="Thar Roxx"></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Maruthi Fronxx</span></div></a>
+                    <div class="carprice">Rs. 7.51 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/exter.webp" alt=""></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Hyundai Exter</span></div></a>
+                    <div class="carprice">Rs. 6.13 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/punch.webp" alt=""></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Tata Punch</span></div></a>
+                    <div class="carprice">Rs. 6.13 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/slavia.jpeg" alt=""></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Skoda Slavia</span></div></a>
+                    <div class="carprice">Rs. 10.69 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+            <div class="cardata">
+                <div class="carphoto"><img src="assets/car_images/swift.webp" alt=""></div>
+                <div class="cardetails">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Maruthi Suzuki Swift</span></div></a>
+                    <div class="carprice">Rs. 6.13 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <div class="avgtag" style="font-size: 12px; margin-top: 8px; font-weight: 300;">Avg. Ex-Showroom price</div>
+                    <div class="showpricebtn" style="margin-top: 12px;"><button>Show price in my city</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="section2 carsinfo"  style="position: relative;">
+        <div class="heading" ><span>Get Offers on Popular Cars</span></div>
+        <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -10px; top:55% ; height: 25px; width: 25px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+            <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: 0px; top:55% ; height: 25px; width: 25px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+        <div class="section2grid carsgrid">
+            
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/compass-exterior-right-front-three-quarter-74.webp" alt="jeep compass"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Jeep Compass</span></div></a>
+                    <div class="carprice">Rs. 18.99 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/slavia.jpeg" alt="skoda slavia"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Skoda Slavia</span></div></a>
+                    <div class="carprice">Rs. 10.69 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/virtus-exterior-right-front-three-quarter-7.webp" alt="Volkswagen Virtus"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Volkswagen Virtus</span></div></a>
+                    <div class="carprice">Rs. 11.56 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/city-exterior-right-front-three-quarter-77.webp" alt="" title="Honda City"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Honda City</span></div></a>
+                    <div class="carprice">Rs. 11.86 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/elevate-exterior-right-front-three-quarter-21.webp" title="Honda Elevate" alt=""></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Honda Elevate</span></div></a>
+                    <div class="carprice">Rs. 11.73 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/kiger-exterior-right-front-three-quarter-9.webp" title="Renault Kiger" alt="tata curvv"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Renault Kiger</span></div></a>
+                    <div class="carprice">Rs. 6.00 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/taigun-exterior-right-front-three-quarter-2.webp" title="Volkswagen Taigun" alt="tata curvv"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Volkswagen Taigun</span></div></a>
+                    <div class="carprice">Rs. 11.70 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cardata" >
+                <div class="carphoto" style="height: 127px;"><img src="assets/car_images/c3-exterior-right-front-three-quarter-4.webp" title="Citrogen C3" alt="tata curvv"></div>
+                <div class="cardetails" style="padding: 8px;">
+                    <a style="text-decoration: none;color: black; " href=""><div class="carname" style="font-size: 15px;"><span>Citrogen C3</span></div></a>
+                    <div class="carprice">Rs. 6.16 Lakh<span style="font-size: 12px; font-weight:400;">  onwards</span></div>
+                    <hr style="height: 1.5px; border-width: 0px; background-color: #e1e1e1; width: 100%; margin: 8px 0; ">
+                    <div class="offerlink">
+                        <a style="text-decoration: none; font-weight: 600; color:#0979b6;"  href="">Get Best Offer</a>
+                    </div>
+                </div>
+            </div>
+            
+           
+
+        
+        
+        </div>
+    </div>
+
+    <div class="section3_brands carsinfo">
+        <div class="heading ">All Brands</div>
+        <div class="logogrid" id="logo_display" style="overflow-y:hidden;">
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/maruti-suzuki1647009823420.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Maruthi Suzuki</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/tata.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Tata</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/toyota.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Toyota</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/mahindra.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Mahindra</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/hyundai.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Hyundai</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/bmw.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >BMW</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/mercedes-benz.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Mercedes-Benz</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/kia.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Kia</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/audi.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Audi</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/skoda1681982956420.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Skoda</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/mg.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >MG</div>
+                </div>
+            </a>
+            
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/land-rover1647236056893.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Land Rover</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/porsche.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Porsche</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/citroen1649763818937.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Citrogen</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/lamborghini.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Lamborghini</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/honda.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Honda</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/volvo.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Volvo</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/volkswagen.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Volkswagen</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/lexus.png" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Lexus</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/ferrari.png" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Ferrari</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/jeep.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Jeep</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/renault.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Renault</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/jaguar.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Jaguar</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/gph63sa_1483779.png" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Maserati</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/byd1650348943682.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >BYD</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/nissan.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Nissan</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/rolls-royce.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Rolls-Royce</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/mini.png" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >MINI</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/aston-martin.png" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >Aston Martin</div>
+                </div>
+            </a>
+            <a style="text-decoration: none;" href="">
+                <div class="logodetails">
+                    <div class="logoimg"><img style="height: 50px; margin: 0 auto;;" src="assets/car_logos/mclaren1649762557086.jpg" alt=""></div>
+                    <div class="logoname" style="text-align: center; font-size: 13px; color: #484848;" >MCLaren</div>
+                </div>
+            </a>
+            
+            
+            
+        </div>
+        <a style="text-decoration: none; color: #0979b6;" href="javascript:void(0)" onclick="expandlogodisplay()">
+        <div style="height: 51px; border: 1px solid #e1e1e1;text-align: center; align-content: center; border-top: none;">
+            <span id="logosbtn" >View More Brands</span>
+        </div>
+    </a>
+    </div>
+    <div class="section4car_choice carsinfo">
+        <div class="heading heading1"><span>Find The Cars Of Your Choice</span></div>
+        <div class="cars_options">
+        <div class="scrolloption option2">
+            <a href="javascript:onclick_budget()" id="budget" class=" scroll_a "><span    style=" padding-left: 0;">BUDGET</span></a>
+            <a href="javascript:onclick_body_type()" id="body_type"  class="scroll_a"><span >BODY TYPE</span></a>
+            <a href="javascript:onclick_fuel_type()" id="fuel_type" class="scroll_a"><span>FUEL TYPE</span></a>
+            <a href="javascript:onclick_transmission()" id="transmission" class="scroll_a"><span>TRANSMISSION</span></a>
+            <a href="javascript:onclick_seating_capacity()" id="seating_capacity" class="scroll_a"><span>SEATING CAPACITY</span></a></div>
+         <div class="parentdiv">
+            <div class="block_none_budget" id="budget_display">
+                <div class="budget_section" >
+                    <a href="#">Under 5 Lakh</a>
+                    <a href="#">Under 6 Lakh</a>
+                    <a href="#">Under 7 Lakh</a>
+                    <a href="">Under 8 Lakh</a>
+                    <a href="">Under 9 Lakh</a>
+                    <a href="">Under 10 Lakh</a>
+                    <a href="">Under 15 Lakh</a>
+                    <a href="">Under 20 Lakhs</a>
+                    <a href="">Under 30 Lakhs</a>
+                    <a href="">Luxury Cars</a>
+                </div>
+                
+            </div>
+            <div class="block_none_bodytype"  id="bodytype_display" style="display: none;">
+                <div class="body_type">
+                    <a style="text-decoration: none; color:#333; ;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/suv_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">SUV</span></div></div><span style="float: right; font-size: 30px; "><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/sedan_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Sedan</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/hatchback_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Hatchback</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/suv_clr_compact.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Compact SUV</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/compactsedan_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Compact Sedan</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/suv_clr_MUV.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">MUV</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/convertible_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Convertible</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/coupe_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Couple</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/wagon_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Station Wagon</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/van_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Minivan</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/car_body/truck_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Truck</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <div class="body_details"></div>                    
+
+                    
+                </div>
+            </div>
+            <div class="block_none_fueltype"  id="fueltype_display" style="display: none;">
+                <div class="fuel_type body_type">
+                    <a style="text-decoration: none; color:#333; ;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/fuel_type/petrol.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Petrol</span></div></div><span style="float: right; font-size: 30px; "><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/fuel_type/diesel.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Diesel</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/fuel_type/cng.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">CNG</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/fuel_type/electric.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Electric</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/fuel_type/h-filter-without-background.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Hybrid</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    <div class="body_details"></div>
+                </div>
+
+            </div>
+            <div class="block_none_transmission" id="transmission_display" style="display: none;">
+                <div class="transmission_type body_type">
+                    <a style="text-decoration: none; color:#333; ;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/transmission/automatic_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Automatic</span></div></div><span style="float: right; font-size: 30px; "><i class='bx bx-chevron-right'></i></span></div></a>
+                    <a style="text-decoration: none; color: #333;;" href=""><div class="body_details"><div style="display: flex;"><div><img src="assets/transmission/manual_clr.svg" alt=""></div><div><span style="margin-left: 15px; font-size: 14px; font-weight: 600; text-align: center; ">Manual</span></div></div><span style="float: right; font-size: 30px;"><i class='bx bx-chevron-right'></i></span></div></a>
+                    
+                    <div class="body_details"></div>
+                </div>                
+            </div>
+
+            <div class="block_none_seating_capacity" id="seatingcapacity_display" style="display: none;">
+                <div class="seating_capacity budget_section" style="padding-inline: 10px;">
+                    <a href="#">5 Seater</a>
+                    <a href="#">6 seater</a>
+                    <a href="#">7 Seater</a>
+                    <a href="">8 Seater</a>
+                    
+                </div>
+            </div>
+         </div>   
+
+
+    </div>
+    <script>
+var btn1 = document.getElementById('budget');
+var btn2 = document.getElementById('body_type');
+var btn3 = document.getElementById('fuel_type');
+var btn4 = document.getElementById('transmission');
+var btn5 = document.getElementById('seating_capacity');
+btn1.classList.add("cars_choice_btn");
+document.getElementById("logo_display").classList.add("logo_displaysize")
+    </script>
+</div>
+<div class="section5_topcars carsinfo" style="position: relative;">
+    <div class="heading7 heading"><span>Top Cars In India</span></div>
+    <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -15px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+    <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: -15px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+    <div class=" s5grid carsgrid">
+        <div class="cardata" style="padding: 0;">
+            <div class="s5carphoto carphoto"><img style="height: 100%; " src="assets/topcars/suv.webp" alt="tata curvv"></div>
+            <div class="cardetails" style="padding: 16px 12px 16px 12px">
+                <a style="text-decoration: none;color: #333;; " href=""><div class="carname"><span>Top SUVs in India</span></div></a>
+                <div class="avgtag" style="font-size: 14px; margin-top: 8px; font-weight: 300;">Tata Curvv, Mahindra Thar Roxx</div>
+                
+            </div>
+        </div>
+        <div class="cardata" style="padding: 0;">
+            <div class="s5carphoto carphoto"><img style="height: 100%; " src="assets/topcars/sedan.webp" alt="tata curvv"></div>
+            <div class="cardetails" style="padding: 16px 12px 16px 12px">
+                <a style="text-decoration: none;color: #333;  " href=""><div class="carname"><span >Top Sedans in India</span></div></a>
+                <div class="avgtag" style="font-size: 14px; margin-top: 8px; font-weight: 300;">Hyundia Verna, Skoda Slavia</div>
+                
+            </div>
+        </div>
+        <div class="cardata" style="padding: 0;">
+            <div class="s5carphoto carphoto"><img style="height: 100%; " src="assets/topcars/hatchbacks.webp" alt="tata curvv"></div>
+            <div class="cardetails" style="padding: 16px 12px 16px 12px">
+                <a style="text-decoration: none;color: #333; " href=""><div class="carname"><span>Top Hatchbacks in India</span></div></a>
+                <div class="avgtag" style="font-size: 14px; margin-top: 8px; font-weight: 300;">Maruthi Suzuki Swift, Maruthi Suzuki Baleno</div> 
+            </div>
+        </div>
+        <div class="cardata" style="padding: 0;">
+            <div class="s5carphoto carphoto"><img style="height: 100%; " src="assets/topcars/suv2.webp" alt="tata curvv"></div>
+            <div class="cardetails" style="padding: 16px 12px 16px 12px">
+                <a style="text-decoration: none;color: #333; " href=""><div class="carname"><span>Top CompactSUVs in India</span></div></a>
+                <div class="avgtag" style="font-size: 14px; margin-top: 8px; font-weight: 300;">Tata Curvv, Mahindra Thar Roxx</div> 
+            </div>
+        </div>
+        <div class="cardata" style="padding: 0;">
+            <div class="s5carphoto carphoto"><img style="height: 100%; " src="assets/topcars/luxury_msite.webp" alt="tata curvv"></div>
+            <div class="cardetails" style="padding: 16px 12px 16px 12px">
+                <a style="text-decoration: none; color: #333;; " href=""><div class="carname"><span>Top Luxury Cars in India</span></div></a>
+                <div class="avgtag" style="font-size: 14px; margin-top: 8px; font-weight: 300;">BMW 7 Series, Toyota Land Crusier</div> 
+            </div>
+        </div>
+        </div>
+</div>
+
+<div class="section6">
+    <div class="s6_inner carsinfo">
+        <div class="roadpricebox">
+            <div class="pricebox_heading" style="color: white; font-size: 22px; font-weight: 600;">Check On-Road Price</div>
+            <div class="searchbar"> <input style=" padding:12px 16px 12px 50px; border: none;width: 290px;height: 18px; border-radius: 3px;
+            margin: 16px 0;" type="text" placeholder="Type to select car name, e.g. Tata Tiago"> </div>   
+            <div class="citydiv" style=" margin: 16px 0;width: 330px; border-radius: 3px; background-color: white; display: flex; justify-content: space-between; padding: 12px;"><span style="height: max-content; ">Select City</span><i style="height: max-content;" class='bx bx-chevron-right'></i>  </div>    
+            <div ><span style="color: white;" >Check the on road price in your city</span></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<div class="section7_comparecars carsinfo" style="position: relative;">
+    <div class="heading7 heading"><span>Featured Cars</span></div>
+        <div class="cars_options">
+            <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -20px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+    <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: -15px; top:55% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+       
+        <div class="carsgrid">
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/cmp_cars/eqs-maybach-exterior-right-front-three-quarter-2.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/amg-eqs-exterior-right-front-three-quarter-60.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails" >
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Mercedes-Benz</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Maybach EQS SUV</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 2.25 Croce</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Mercedes-Benz</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">AMG EQS</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 2.45 Croce</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div>  
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/car_images/curvv-exterior-right-front-three-quarter.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/creta-exterior-right-front-three-quarter-4.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails">
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Tata</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Curvv</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 9.99 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Hyundai</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Creta</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 11.00 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div> 
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/cmp_cars/thar-roxx-exterior-right-front-three-quarter-24.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/thar-exterior-right-front-three-quarter-35.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails">
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Mahindra</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Thar Roxx</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 12.99 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Mahindra</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Thar</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 11.35 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div> 
+                    
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/cmp_cars/xuv-3xo-exterior-right-front-three-quarter-33.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/nexon-exterior-right-front-three-quarter-71.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails">
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Mahindra</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">XUV 3XO</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 7.49 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Tata</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Nexon</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 8.00 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div> 
+                    
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/cmp_cars/basalt-exterior-right-front-three-quarter-3.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/c3-aircross-exterior-right-front-three-quarter-34.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails">
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Citrogen</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Basalt</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 7.99 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Citrogen</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">C3 Aircross</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 9.99 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div> 
+                    
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+            <div class="cardata">
+                <div class="carphotos">
+                <div class="carphoto1" ><img src="assets/cmp_cars/fronx-exterior-right-front-three-quarter-109.webp" alt="tata curvv"></div>
+                <span  style=" position: absolute; height: 20px; width: 20px;  border-radius: 50%; right:140px; top: 55px; border: 1px solid #0979b6;" class="circle">VS</span>
+                <div class="carphoto1"><img src="assets/cmp_cars/brezza-exterior-right-front-three-quarter-7.webp" alt="tata curvv"></div>
+            </div>
+                <div class="cardetails">
+                    <div style="width: 135px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Maruthi</div>
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Fronxx</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 7.51 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                        
+
+
+                    </div>
+                    <div style="text-align: start; width: 135px; margin-left: 5px;" class="cardetail_list">
+                        <div class="brand" style="color: #484848; font-size: 13px;">Maruthi</div>
+                    
+                        <div class="carname" style="color: #333; font-size: 16px; font-weight: 700;">Brezza</div>
+                        <div class="price" style="color: #333; font-size: 13px; font-weight: 700; margin-top: 5px;">Rs. 8.34 Lakh</div>
+                        <div class="optional" style="color: #6f6f6f; font-size: 13px;">onwards</div>
+                </div> 
+                    
+                </div>
+                <a style="text-decoration: none; color:#0b7ab6" href=""><div class="comparebtn">Compare Now</div></a>
+            </div>
+</div>
+        </div>
+        </div>
+    <div class="section8_popularcars" >
+
+        <div class="carsinfo" style="position: relative;">
+            <div class="heading heading1"><span>Popular Used Cars</span></div>
+            <div class="cars_options">
+                <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -15px; top:50% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+    <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: -5px; top:50% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+           
+            <div class="carsgrid">
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/swift-exterior-right-front-three-quarter.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Maruthi Suzuki Swift</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 99,000<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/wagon-r-2022-exterior-right-front-three-quarter-3.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Maruthi Suzuki Wagon R</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 45,000<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/creta-exterior-right-front-three-quarter-16.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Hyundai Creta</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 4 lakh<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/city-exterior-right-front-three-quarter-77.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Honda City</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 75,000<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/baleno-exterior-right-front-three-quarter-66.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Maruthi Suzuki Baleno</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 2 lakh<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+                <div class="cardata">
+                    <div class="carphoto"><img src="assets/used_cars/i20-exterior-right-front-three-quarter-7.webp" alt="tata curvv"></div>
+                    <div class="cardetails">
+                        <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Used Hyundai Elite i20</span></div></a>
+                        <div class="carprice" style="font-size: 16px;">Rs. 2 lakh<span style="font-size: 12px; font-weight:400;">  Starting Price</span></div>
+                        
+                    </div>
+                </div>
+         </div>
+         <a style="font-size: 15px; font-weight: 700; color: #2a8bbf;; " href=""><div style="padding-block: 10px; height: 50px; align-content: center; color: #2a8bbf;"><span style="font-size: 15px;">View All Used Cars</span></div></a>
+        </div>
+    </div>
+      
+
+</div>
+<div class="car_updates carsinfo" style="position: relative;">
+    <div class="heading heading1"><span>Find The Cars Of Your Choice</span></div>
+        <div class="cars_options">
+            <div class="leftbtn" onclick="leftscroll()" style="position: absolute; z-index: 100; left: -15px; top:50% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;" ><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-left' ></i></span></div>
+            <div class="rightbtn" onclick="rightscroll()" style="position: absolute; z-index: 100; right: -5px; top:50% ; height: 30px; width: 30px; border-radius: 50%; background-color:white;box-shadow: 2px 2px 5px black; align-content: center; text-align: center;"><span style="font-size: 25px; color: #484848;;"><i class='bx bx-chevron-right' ></i></span></div>
+        <div class="scrolloption option2">
+            <a href="javascript:onclick_carnews()" id="carnews" class=" scroll_a "><span    style=" padding-left: 0;">CAR NEWS</span></a>
+            <a href="javascript:onclick_expertnews()" id="expertnews"  class="scroll_a"><span >EXPERT NEWS</span></a>
+            <a style="cursor:not-allowed;" href="javascript:void(0)" id="fuel_type" class="scroll_a"><span>VIDEOS</span></a></div>
+         <div class="parentdiv">
+            <div class="block_none_expert_news" id="expert_news_display" style="display: none;">
+                <div class="expert_news carsgrid">
+                   
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/expert/kia-sonet-right-front-three-quarter0.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Kia Sonet HTX+ Diesel iMT Long Term Report: Introduction</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>tech bachelor</span></span><span style="float: right; font-size: 12px;">31 Aug 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">This is an updated verion of the Kia Sonet that was launched in India in January 2024</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/expert/mahindra-thar-roxx-front-view0.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Mahindra Thar Roxx vs Maruthi Jimny: The Right Buy </span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Aditya Nadkarni</span></span><span style="float: right; font-size: 12px;">06 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">Let's start with the verdict. Buy the Mahindra Thar Roxx if you want a diesel-powered 4x4.</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/expert/tata-curvv-ev-left-front-three-quarter0.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Tata Curvv EV First Drive Review</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Singh Venkat</span></span><span style="float: right; font-size: 12px;">23 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">The Tata Curvv range will be take on the likes of the hyundai Creta, Kia Sektos and Others</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/expert/mahindra-thar-roxx-right-front-three-quarter0.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Mahindra Thar Roxx First Drive Review</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Vikrant Singh</span></span><span style="float: right; font-size: 12px;">14 Nov 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">The Thar Roxx is bigger, more practical Thar. One could also refer to its as the Scopion N in Thar</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                </div>
+                <a style="font-size: 15px; font-weight: 700; color: #2a8bbf;; " href=""><div style="padding-block: 10px; height: 50px; align-content: center; color: #2a8bbf;"><span style="font-size: 15px;">All News</span></div></a>
+              </div>
+            <div class="block_none_car_news" id="car_news_display" >
+                <div class="car_news carsgrid">
+                   
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/carnews/maruti-suzuki-fronx-left-front-three-quarter2.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Maruthi Suzuki Fronxx AMT real-world fuel efficiency tested</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Haji Chakralwale</span></span><span style="float: right; font-size: 12px;">07 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">We have tested the real fuel efficiency of the Maruthi Suzuki Fronxx</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/carnews/left-front-three-quarter1.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Kia Sonet prices in India revised; chnages detailed </span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Aditya Nadkarni</span></span><span style="float: right; font-size: 12px;">06 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">The price change is applicable to select variants</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/carnews/byd-e6-facelift-left-front-three-quarter1.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>BYD M6 teased again ahead of launch</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>desirazu Venkat</span></span><span style="float: right; font-size: 12px;">06 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">The BYD M6 will repalce the BYD E6 in the automaker's hiearchy</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                        <div class="cardata">
+                            <div class="carphoto"><img src="assets/carnews/renault-duster-right-front-three-quarter0.webp" alt="tata curvv"></div>
+                            <div class="cardetails">
+                                <a style="text-decoration: none;color: black; " href=""><div class="carname"><span>Seven-seat Renault Duster to debut next month at paris Motor Show</span></div></a>
+                                <div class="author carprice"><span style="float: left; font-size: px;">By <span>Desirazu Venkat</span></span><span style="float: right; font-size: 12px;">06 Sep 2024</span>.</div>
+                                <div class="avgtag" style=" font-weight: 300;">The seven-seat model expected to be launched in india in 2025</div>
+                                <div class="showreadtag" style="margin-top: 12px;"><a style="float: right; text-decoration: none; color:#2a8bbf;" href="">Read More</a></div>
+                            </div>
+                        </div>
+                </div>
+                <a style="font-size: 15px; font-weight: 700; color: #2a8bbf;; " href=""><div style="padding-block: 10px; height: 50px; align-content: center; color: #2a8bbf;"><span style="font-size: 15px;">All News</span></div></a>
+              </div>
+            </div>
+        </div>
+        <script>
+            var newsbtn1 = document.getElementById('carnews');
+            var newsbtn2 = document.getElementById('expertnews');
+           
+            newsbtn1.classList.add("cars_choice_btn");
+                </script>
+</div>
+<div class="footer">
+    <div class="footer_inner carsinfo">
+        <div class="ft_s1" style=" display: flex; justify-content: space-between; padding: 30px 0px;">
+            <span >Languages: <span style="padding-inline: 10px;">English</span> हिंदी</span>
+            <span >|</span>
+            <span>About Us</span>
+            <span>Careers</span>
+            <span>Terms & Conditions</span>
+            <span>Advertise</span>
+
+
+        </div>
+        <hr>
+        <div class="ft_s2 ft_s1" style=" color: rgba(255, 255, 255, 0.5); display: flex; padding: 30px 0px; padding-bottom: 0;";>
+            <div class="left_section" style="width:50%;">CONTACT US<br>
+                <span><i class='bx bxl-facebook'></i></span>
+                <span><i class='bx bxl-twitter' ></i></span>
+                <span><i class='bx bxl-youtube' ></i></span>
+                <span><i class='bx bxl-linkedin' ></i></span>
+                <span><i class='bx bxl-instagram' ></i></span>
+            </div>
+            <div class="right_section" style="align-content: start; width: 50%;" ><span>DOWNLOAD MOBILE APP</span><br> 
+            <img src="assets/app-store.svg" alt="">
+            <img style="padding-left: 20px;" src="assets/play-store.svg" alt="">
+            </div>
+            
+        </div>
+        <hr>
+        <div class="ft_s3 ft_s1" style="padding-block: 20px; color: white; display: flex; justify-content: space-between;">
+            <span>©CarTrade Tech.</span>
+            <span>Visitor Agreement & Privacy Policy</span>
+               
+
+        </div>
+      
+
+
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
