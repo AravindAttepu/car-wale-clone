@@ -17,6 +17,7 @@ body, html{
     padding-inline: 100px;
     margin: 0 auto;
     display: flex;
+   flex-wrap: wrap;
     z-index:100;
 
 }
@@ -36,7 +37,7 @@ body, html{
 .right_nav{
     height: inherit;
    display: flex;
-   flex-wrap: nowrap;
+  
     align-content: center;
     display: inline-block;
 }
@@ -231,7 +232,7 @@ color: #333;
 }
 .section3_brands .logogrid{
     display: grid;
-    grid-template-columns: repeat(6,159.9px);
+    grid-template-columns: repeat(auto-fit,minmax(159.9px,2fr));
     grid-template-rows: 106px;
     grid-auto-rows: minmax(106px, 1fr);
     grid-auto-flow: row;

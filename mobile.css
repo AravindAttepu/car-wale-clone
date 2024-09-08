@@ -1,3 +1,26 @@
+@media screen and (max-width: 900px)
+{
+    .nav_bar{
+        justify-content: center;
+        margin-inline: 5px;
+    }
+    .left_nav span{
+        margin-inline: 10px;
+        font-size: 12px;
+
+    }
+    .left_nav img{
+        height: 15px;
+        margin-right: 10px;
+    }
+    .right_nav .searchbar
+    {
+        width: 200px;
+      
+    }
+}
+
+
 @media screen and (max-width: 500px) {
     .carsinfo{
         width: 100%;
